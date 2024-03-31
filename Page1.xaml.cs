@@ -76,5 +76,20 @@ namespace practice_2_dataset
                 MessageBox.Show("Не трожь внешние ключи!");
             }
         }
+
+        private void dg_BD_books_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dg_BD_books.SelectedItem != null)
+            {
+                DataRowView row = dg_BD_books.SelectedItem as DataRowView;
+                if (row != null)
+                {
+                    pole1.Text = row.Row["Title"].ToString();
+                    pole2.Text = row.Row["Author_ID"].ToString();
+                    pole3.Text = row.Row["Genre_ID"].ToString();
+                    pole4.Text = row.Row["PublishDate"].ToString();
+                }
+            }
+        }
     }
 }

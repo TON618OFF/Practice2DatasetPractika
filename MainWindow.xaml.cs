@@ -84,5 +84,20 @@ namespace practice_2_dataset
             }
         }
 
+        private void dg_BD_readers_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (dg_BD_readers.SelectedItem != null)
+            {
+                DataRowView row = dg_BD_readers.SelectedItem as DataRowView;
+                if (row != null)
+                {
+                    pole1.Text = row.Row["ReaderSurname"].ToString();
+                    pole2.Text = row.Row["ReaderName"].ToString();
+                    pole3.Text = row.Row["ReaderMiddleName"].ToString();
+                    pole4.Text = row.Row["DateOfBirth"].ToString();
+                    pole5.Text = row.Row["Email"].ToString();
+                }
+            }
+        }
     }
 }

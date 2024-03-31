@@ -65,5 +65,20 @@ namespace practice_2_dataset
                 MessageBox.Show("Не трожь внешние ключи!");
             }
         }
+
+        private void dg_BD_bookloans_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dg_BD_bookloans.SelectedItem != null)
+            {
+                DataRowView row = dg_BD_bookloans.SelectedItem as DataRowView;
+                if (row != null)
+                {
+                    pole1.Text = row.Row["Book_ID"].ToString();
+                    pole2.Text = row.Row["Reader_ID"].ToString();
+                    pole3.Text = row.Row["LoanDate"].ToString();
+                    pole4.Text = row.Row["ReturnDate"].ToString();
+                }
+            }
+        }
     }
 }

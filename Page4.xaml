@@ -24,7 +24,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="loanstxt" Text="ЗАЁМЫ КНИГ" Grid.Column="2" VerticalAlignment="Center" TextAlignment="Center" FontWeight="Bold" FontFamily="Bahnschrift Condensed" FontSize="24"/>
-        <DataGrid x:Name="dg_BD_bookloans" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5" IsReadOnly="True" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"/>
+        <DataGrid x:Name="dg_BD_bookloans" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5" IsReadOnly="True" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectionChanged="dg_BD_bookloans_SelectionChanged"/>
         <Button x:Name="prev_page" Content="&lt;"/>
         <Button x:Name="DeleteLoans" Content="Удалить запись" Grid.Row="4" Grid.Column="1" FontSize="11" Width="120" Click="DeleteLoans_Click"/>
         <Button x:Name="UpdateLoans" Content="Изменить запись" Grid.Row="5" Grid.Column="2" FontSize="11" Width="120" Click="UpdateLoans_Click"/>

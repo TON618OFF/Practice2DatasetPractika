@@ -22,7 +22,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dg_BD_readers" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5" IsReadOnly="True" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"/>
+        <DataGrid x:Name="dg_BD_readers" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5" IsReadOnly="True" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectionChanged="dg_BD_readers_SelectionChanged_1"/>
         <Button x:Name="next_page" Grid.Column="6" Content="&gt;" Click="next_page_Click"/>
         <Button x:Name="DeleteReaders" Content="Удалить запись" Grid.Row="4" Grid.Column="1" FontSize="11" Width="120" Click="DeleteReaders_Click"/>
         <Button x:Name="UpdateReaders" Content="Изменить запись" Grid.Row="5" Grid.Column="2" FontSize="11" Width="120" Click="UpdateReaders_Click"/>

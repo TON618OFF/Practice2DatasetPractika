@@ -74,5 +74,19 @@ namespace practice_2_dataset
                 MessageBox.Show("Не трожь внешние ключи!");
             }
         }
+
+        private void dg_BD_authors_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dg_BD_authors.SelectedItem != null)
+            {
+                DataRowView row = dg_BD_authors.SelectedItem as DataRowView;
+                if (row != null)
+                {
+                    pole1.Text = row.Row["AuthorSurname"].ToString();
+                    pole2.Text = row.Row["AuthorName"].ToString();
+                    pole3.Text = row.Row["AuthorMiddleName"].ToString();
+                }
+            }
+        }
     }
 }
